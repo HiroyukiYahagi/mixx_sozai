@@ -121,7 +121,7 @@ body {
   }
 }
 
-.uk-button {
+.uk-button:not(.uk-button-text):not(.uk-button-link) {
   border-radius: 4px;
   border-bottom: 4px solid darken($global-primary-background, 10%);
 }
