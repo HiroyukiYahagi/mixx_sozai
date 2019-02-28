@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/*
+Theme Name: MIXX Sozai
+Theme URI: 
+Author: HIROYUKI YAHAGI
+Author URI: 
+Description: MIXX 素材用テンプレート
+Requires at least: WordPress 5.1
+Version: 1.1
+License:
+License URI:
+*/
+
+$global-font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+$base-heading-font-weight: bold;
+
+
+$global-primary-background: #5A94A1;
+$global-secondary-background: #666666;
+
+$global-danger-background: #CF0000;
+$global-warning-background: #e4bd60;
+$global-success-background: #b2d6d4;
+
+$overlay-primary-background: rgba($global-primary-background, 0.8);
+
+$form-background: white;
+$form-focus-background: white;
+
+$heading-primary-font-size-l: 3rem;
+$heading-primary-font-size-m: $heading-primary-font-size-l * 0.85;
+$heading-primary-font-size-s: $heading-primary-font-size-l * 0.7;
+$global-xxlarge-font-size: 2.2rem;
+$global-xlarge-font-size: 1.8rem;
+$global-large-font-size: 1.4rem;
+$global-medium-font-size: 1.2rem;
+$global-font-size: 15px;
+$global-small-font-size: 0.9rem;
+$base-small-font-size: $global-small-font-size;
+
+$border-rounded-border-radius: 16px;
+
+$navbar-nav-item-height: 56px;
+$table-striped-border:none;
+
+$container-small-max-width: 1024px;
+
+// 2. Import default variables and available mixins.
+@import "../uikit/src/scss/variables-theme.scss";
+@import "../uikit/src/scss/mixins-theme.scss";
+
+
+// 4. Import UIkit.
+@import "../uikit/src/scss/uikit-theme.scss";
+
+a,button {
+  text-transform: inherit !important;
+}
+
+body {
+}
+
+.uk-background-white {
+  background-color: white;
+}
+
+.uk-image-wrapper {
+    overflow: hidden;
+
+    & > * {
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        min-height: 100%;
+        min-width: 100%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+@supports ( object-fit: cover ) {
+    .uk-image-wrapper > * {
+        position: static;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        top: 0;
+        -ms-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+#main {
+  h2 {
+    padding: 12px;
+    background-color: $global-muted-background;
+  }
+
+  h3 {
+    padding: 0px 12px;
+    border-left: 4px solid $global-primary-background;
+  }
+
+  ol {
+
+  }
+
+  blockquote {
+    background-color: $global-muted-background;
+    padding: 12px;
+    font-size: $global-font-size;
+    font-style: inherit;
+  }
+}
+
+.uk-button {
+  border-radius: 4px;
+  border-bottom: 4px solid darken($global-primary-background, 10%);
+}
